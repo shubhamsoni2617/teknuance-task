@@ -1,0 +1,22 @@
+.Modal{
+    position: absolute;
+    z-index: 500;
+    background-color: white;
+    width: 60%;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px black;
+    padding: 16px;
+    left: 15%;
+   
+    box-sizing: border-box;
+    opacity: 1;
+    margin: 100px 130px;
+}
+
+
+.Modal i{
+    cursor: pointer;
+    position: absolute;
+    right:    0;
+    top:   0;
+}
