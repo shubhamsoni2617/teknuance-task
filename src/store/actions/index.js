@@ -19,16 +19,16 @@ export const singlePerson=(person)=>{
     }
 }
 
-export const addPerson= personData => axios.post('https://teknuance-f1dc8.firebaseio.com/People.json', personData);
+export const addPerson= async personData =>await axios.post('https://teknuance-f1dc8.firebaseio.com/People.json', personData);
 
-export const deletePerson=async (deletePersonArr)=>{
+export const deletePerson=async deletePersonArr=>{
 
-    console.log(deletePersonArr)
     if(deletePersonArr.length>0){
         for(let key in deletePersonArr){
            await axios.delete(`https://teknuance-f1dc8.firebaseio.com/People/${deletePersonArr[key]}.json`)
         }
         
     }
+    //Temporary, just to avoid a lot of dependencies
     window.location.reload();
 }
