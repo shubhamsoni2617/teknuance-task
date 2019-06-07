@@ -16,7 +16,10 @@ class AddPerson extends Component{
     }
 
     clickHandler=(event)=>{
+        event.preventDefault();
         addPerson(this.state.personForm);
+        //Temporary, just to avoid a lot of dependencies
+    window.location.reload();
     }
 
     onChangeHandler=(event,id)=>{
